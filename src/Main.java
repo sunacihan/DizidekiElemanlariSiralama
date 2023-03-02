@@ -31,4 +31,5 @@ public class Main {
         }
         System.out.println("Küçükten büyüğe sıralanmış hali:");
         System.out.println(Arrays.toString(arr));
-    }}
+    }
+}
