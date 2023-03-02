@@ -1,15 +1,26 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
         int degisken;
+        Scanner input=new Scanner(System.in);
+        System.out.print("Dizinin boyutunu giriniz:");
+        int n=input.nextInt();
+        int[] arr = new int[n];
 
-        int[] arr = {4, 3, 7, 5, 9, 2, 8, 1, 6};
+        System.out.println("Dizinin elemanlarını giriniz:");
 
+        for (int i=0;i<n;i++){
+            System.out.print((i+1)+". Elemanı:");
+            arr[i]=input.nextInt();
 
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr.length; j++) {
+        }
+
+        System.out.println(Arrays.toString(arr));
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
 
                 if (i != j && arr[i] < arr[j]) {
                     degisken = arr[i];
@@ -18,5 +29,6 @@ public class Main {
                 }
             }
         }
+        System.out.println("Küçükten büyüğe sıralanmış hali:");
         System.out.println(Arrays.toString(arr));
     }}
